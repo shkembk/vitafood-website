@@ -1,0 +1,138 @@
+.cert-page {
+    background-color: var(--color-bg);
+    min-height: 100vh;
+    padding: 8rem 0 6rem 0;
+}
+
+.cert-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.cert-page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.cert-page-title {
+    color: var(--color-primary, #d10000);
+    /* Assuming primary is red from the reference */
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.cert-page-subtitle {
+    color: var(--color-text);
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    row-gap: 4rem;
+}
+
+.cert-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.cert-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.cert-image-wrapper {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    /* Certificates are usually white */
+    padding: 10px;
+    /* Slight border effect */
+    border: 1px solid #eaeaea;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cert-image-wrapper:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cert-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.cert-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(209, 0, 0, 0.0);
+    /* Transparent initially */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.cert-image-wrapper:hover .cert-overlay {
+    background-color: rgba(209, 0, 0, 0.8);
+    /* Red tint on hover */
+    opacity: 1;
+}
+
+.cert-overlay span {
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid white;
+    border-radius: 4px;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.cert-image-wrapper:hover .cert-overlay span {
+    transform: translateY(0);
+}
+
+.cert-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-dark, #333);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .cert-page-title {
+        font-size: 2.2rem;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+}

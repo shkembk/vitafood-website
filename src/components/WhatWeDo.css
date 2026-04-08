@@ -1,0 +1,72 @@
+.what-we-do-section {
+    background-color: var(--color-white);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-intro {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.pillar-card {
+    padding: 2.5rem;
+    background-color: var(--color-secondary);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.pillar-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(29, 63, 43, 0.1);
+    /* Primary color low opacity */
+    box-shadow: var(--shadow-md);
+}
+
+.pillar-icon {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    background: var(--color-white);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
+}
+
+.pillar-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.pillar-text {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+}
