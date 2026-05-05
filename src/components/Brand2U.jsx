@@ -19,7 +19,7 @@ const Brand2U = () => {
                     <p className="brand-desc">
                         2U is Vitafood’s consumer-facing brand, offering healthy, great-tasting foods developed and produced using the same quality, safety, and sourcing standards we apply to all our manufacturing operations.
                     </p>
-                    <a href="#" className="btn btn-outline-white">
+                    <a href="https://2u-ks.com/" target="_blank" rel="noopener noreferrer" className="btn btn-outline-white">
                         Visit the 2U Website <ExternalLink size={16} style={{ marginLeft: '8px' }} />
                     </a>
                 </motion.div>
