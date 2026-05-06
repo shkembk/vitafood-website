@@ -8,7 +8,6 @@ import cerealsImage from "../assets/images/cereals.png";
 import snacksImage from "../assets/images/snacks.png";
 import superfoodsImage from "../assets/images/superfoods.png";
 
-
 const ProductCategories = () => {
     const categories = [
         {
@@ -33,7 +32,8 @@ const ProductCategories = () => {
             id: 4,
             title: "Superfoods & Seeds",
             description: "Chia, flax, quinoa, pumpkin seeds, sunflower seeds, and more — rich in nutrients and ideal for modern diets.",
-            image: superfoodsImage
+            image: superfoodsImage,
+            link: "https://2u-ks.com/superfoods-2/"
         }
     ];
 
@@ -56,12 +56,20 @@ const ProductCategories = () => {
                             <div className="category-image">
                                 <img src={category.image} alt={category.title} />
                             </div>
+
                             <div className="category-content">
                                 <h3 className="category-title">{category.title}</h3>
                                 <p className="category-desc">{category.description}</p>
-                                <button className="btn-link">
-                                    View Category <ArrowRight size={16} />
-                                </button>
+
+                                {category.link ? (
+                                    <a href={category.link} className="btn-link">
+                                        View Category <ArrowRight size={16} />
+                                    </a>
+                                ) : (
+                                    <button className="btn-link">
+                                        View Category <ArrowRight size={16} />
+                                    </button>
+                                )}
                             </div>
                         </motion.div>
                     ))}
